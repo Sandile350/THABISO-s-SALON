@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>THABISO'S SALON</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Poppins, Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fff3e6, #ffe6f0);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* ---------- SPARKLES ---------- */
+.sparkle {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: gold;
+  border-radius: 50%;
+  animation: sparkle 5s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes sparkle {
+  0% { transform: translateY(0) scale(0); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-120vh) scale(1); opacity: 0; }
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f9c5d1, #fceabb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #8b2f3c;
+  animation: slideDown 1.5s ease;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  color: #5c2a35;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 80px 10%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: #8b2f3c;
+  margin-bottom: 40px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 70px;
+  background: #d4a048;
+  margin: 15px auto;
+  border-radius: 3px;
+}
+
+/* ---------- SLIDER ---------- */
+.slider {
+  max-width: 800px;
+  margin: auto;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.15);
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { margin-left: 0; }
+  33% { margin-left: 0; }
+  36% { margin-left: -100%; }
+  69% { margin-left: -100%; }
+  72% { margin-left: -200%; }
+  100% { margin-left: -200%; }
+}
+
+/* ---------- HAIRSTYLES ---------- */
+.cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  max-width: 350px;
+  border-radius: 25px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  transition: transform 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 20px 0 10px;
+  color: #8b2f3c;
+}
+
+.card p {
+  padding: 0 20px 25px;
+}
+
+/* ---------- PRICES ---------- */
+.price-box {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.12);
+}
+
+.price-box li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px dashed #ddd;
+  font-size: 1.1rem;
+}
+
+.price-box span:last-child {
+  color: #8b2f3c;
+  font-weight: bold;
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+  background: linear-gradient(120deg, #f8dcdc, #fceabb);
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.12);
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin: 15px 0;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #f9c5d1;
+  color: #5c2a35;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.4rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SPARKLES -->
+<div class="sparkle" style="left:10%; animation-delay:0s;"></div>
+<div class="sparkle" style="left:30%; animation-delay:2s;"></div>
+<div class="sparkle" style="left:60%; animation-delay:4s;"></div>
+<div class="sparkle" style="left:80%; animation-delay:1s;"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>THABISO'S SALON</h1>
+    <p>Beauty • Style • Confidence</p>
+  </div>
+</div>
+
+<!-- SLIDER -->
+<section>
+  <h2>Gallery</h2>
+  <div class="slider">
+    <div class="slides">
+      <img src="C:\Users\Admin\Documents\Cleaning TECH\men-hairstyle1.jpeg" alt="Men's hairstyle">
+	  <img src="C:\Users\Admin\Documents\Cleaning TECH\men-hairstyle2.jpeg" alt="Men's hairstyle">
+      <img src="C:\Users\Admin\Documents\Cleaning TECH\ladies-hairstyle1.jpeg" alt="Ladies's hairstyle">
+      <img src="C:\Users\Admin\Documents\Cleaning TECH\ladies-hairstyle2.jpeg" alt="Ladies's hairstyle">
+    </div>
+  </div>
+</section>
+
+<!-- STYLES -->
+<section>
+  <h2>Our Hairstyles</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="C:\Users\Admin\Documents\Cleaning TECH\men-hairstyle3.jpeg" alt="Men's hairstyle">
+      <h3>Men’s Hairstyles</h3>
+      <p>Fresh fades, brush cuts, clean lines and chiskop styles.</p>
+    </div>
+
+    <div class="card">
+      <img src="C:\Users\Admin\Documents\Cleaning TECH\ladies-hairstyle3.jpeg" alt="Ladies's hairstyle">
+      <h3>Ladies’ Hairstyles</h3>
+      <p>Brushing, colouring, treatments & beautiful hair care.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section>
+  <h2>Prices</h2>
+  <ul class="price-box">
+    <li><span>Soft & Free</span><span>R130</span></li>
+    <li><span>Hair Wash</span><span>R70</span></li>
+    <li><span>Dark & Lovely</span><span>R190</span></li>
+    <li><span>Cut</span><span>R50</span></li>
+    <li><span>Brush Cut</span><span>R50</span></li>
+    <li><span>Plain Brush</span><span>R30</span></li>
+    <li><span>Brush</span><span>R40</span></li>
+    <li><span>Chiskop</span><span>R30</span></li>
+    <li><span>Cut & Black Dye</span><span>R80</span></li>
+    <li><span>Cut & Colour</span><span>R150</span></li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <p><strong>Phone:</strong> 071 234 5678</p>
+    <p><strong>WhatsApp:</strong> 071 234 5678</p>
+    <p><strong>Location:</strong> BODIBE LETLAPENG</p>
+    <p><strong>Hours:</strong> Monday – Saturday | 8:00 AM – 6:00 PM</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 THABISO'S SALON · Always Looking Your Best ✨
+</footer>
+
+</body>
+</html>
